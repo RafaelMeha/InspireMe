@@ -35,7 +35,7 @@ struct Provider: TimelineProvider {
 
         let currentDate = Date()
         for halfHourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .minute, value: halfHourOffset * 1, to: currentDate)!
+            let entryDate = Calendar.current.date(byAdding: .minute, value: halfHourOffset * 30, to: currentDate)!
             let entry = SimpleEntry(date: entryDate, phrase: InspireMePhrases.all.randomElement() ?? "")
             entries.append(entry)
         }
